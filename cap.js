@@ -67,6 +67,21 @@ function division(a, b) {
 division(10, 7).then(data => {
     console.log("Result: ", data);
     console.log(".... Promise");
+
+    division(10, 4).then(data => {
+        console.log("Result: ", data);
+        console.log(".... Promise");
+
+        division(20, 7).then(data => {
+            console.log("Result: ", data);
+            console.log(".... Promise");
+        }).catch(err => {
+            console.log("Error division: ", err);
+        });
+    }).catch(err => {
+        console.log("Error division: ", err);
+    });
 }).catch(err => {
     console.log("Error division: ", err);
 });
+
