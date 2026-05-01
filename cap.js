@@ -52,36 +52,25 @@ division(10, 3).then(data => {
 });
 
 // Promise 
-function division(a, b) {
-    return new Promise((resolve, reject) => {
+async function division(a, b) {  
         if (b === 0) {
-            reject("Not allowed to divide by zero");
-        }else {
-            setTimeout(function() {
-                resolve(a % b);
-            }, 5000);
+            throw new Error("Not allowed to divide by zero");
+        } else {
+           return a % b
         }
-    });
 }
 
-division(10, 7).then(data => {
-    console.log("Result: ", data);
-    console.log(".... Promise");
+async function run() {
 
-    division(10, 4).then(data => {
-        console.log("Result: ", data);
-        console.log(".... Promise");
+    let result = await division(10, 3);
+    console.log("result 1:", result)
 
-        division(20, 7).then(data => {
-            console.log("Result: ", data);
-            console.log(".... Promise");
-        }).catch(err => {
-            console.log("Error division: ", err);
-        });
-    }).catch(err => {
-        console.log("Error division: ", err);
-    });
-}).catch(err => {
-    console.log("Error division: ", err);
-});
+    result = await division(10, 4);
+    console.log("result 1:", result)
+
+    result = await division(20, 7);
+    console.log("result 1:", result)
+}
+run();
+
 
