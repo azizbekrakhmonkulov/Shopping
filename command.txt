@@ -1,0 +1,7 @@
+SHEEL commands
+cd, cd /, cd .., cd ~, pwd, ls, ls -ls, mkdir, touch, rm -rf name, nano, vim, cat
+
+PACKAGE MANAGER
+Node npm
+Python pip, pipenv (pipi)
+MacOS brew
