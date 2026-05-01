@@ -8,7 +8,7 @@
     "advice": "nodemon advice.js",
     "compute": "nodemon compute.js",
     "suggest": "nodemon suggest.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cap": "nodemon cap.js"
   },
   "author": "DANIEL",
   "license": "MIT",
